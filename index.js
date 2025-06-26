@@ -21,10 +21,14 @@ setIndicator("#ccc"); // Default color for the indicator
 function handleSlider() {
     inputSlider.value = passwordLength;
     lengthDisplay.innerText = passwordLength;
-    //generatePassword();
+    const min = Number(inputSlider.min);
+    const max = Number(inputSlider.max);
+    const percent = ((passwordLength - min) * 100) / (max - min);
+    inputSlider.style.backgroundSize = `${percent}% 100%`;
 }
 function setIndicator(color){
     indicator.style.backgroundColor = color;
+    indicator.style.boxShadow = `0 0 5px ${color}, 0 0 10px ${color}`;
 }
 
 function getRandomInteger(min, max) {

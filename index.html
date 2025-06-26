@@ -15,8 +15,8 @@
 
         <div class="display-container">
             <input readonly placeholder="Password" class="display" data-passwordDisplay>
-            <button>
-                <span data-copyMsg></span>
+            <button class="copyButton" data-copyButton>
+                <span class="tooltip" data-copyMsg></span>
                 <img src="https://cdn-icons-png.flaticon.com/512/1622/1622069.png" alt="copy icon" height="24" width="24" data-copyButton>
             </button>
         </div>
@@ -28,22 +28,22 @@
                 <p data-lengthNumber>0</p>
             </div>
            
-            <input type="range" min="1" max="20" step="1" data-lengthSlider>
+            <input type="range" min="1" max="20" class="slider" data-lengthSlider>
 
-            <div>
+            <div class="check">
                 <input type="checkbox" id="uppercase">
                 <label for="uppercase">Include Uppercase Letters</label>
             </div>
 
-            <div>
+            <div class="check">
                 <input type="checkbox" id="lowercase">
                 <label for="lowercase">Include Lowercase Letters</label>
             </div>
-            <div>
+            <div class="check">
                 <input type="checkbox" id="numbers">
                 <label for="numbers">Include Numbers</label>
             </div>
-            <div>
+            <div class="check">
                 <input type="checkbox" id="symbols">
                 <label for="symbols">Include Symbols</label>
             </div>
